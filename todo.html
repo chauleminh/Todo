@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script type="text/javascript">
+        function createItemList(newItem){
+            var newli = document.createElement('li');
+            newli.appendChild(document.createTextNode(newItem));
+            return newli;
+        }
+            function addNewTask() {
+                var newItem = document.getElementById('newTask').value;
+   if (newItem != ""){
+       document.getElementById('newTask').value ="";
+       var newTodo =createItemList(newItem);
+       document.getElementById('listWork').appendChild(newTodo);
+   }
+    alert(newItem);
+    }
+    </script>
+
+</head>
+<body>
+<h1>To To list</h1>
+
+<input id="newTask" type="text" placeholder="nhap cong viec" style="width:90%;" />
+<button id="addnew" onclick="addNewTask()">Thêm Mới</button>
+<ul id="listWork">
+    <li>Mua bao <button> Done</button><button> Remove</button></li>
+    <li> Nau cơm<button> Done</button><button> Remove</button></li>
+    <li>Lau nha<button> Done</button><button> Remove</button></li>
+
+</ul>
+ </body>
+</html>
+
